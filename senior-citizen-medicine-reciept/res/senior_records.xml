@@ -1,0 +1,11 @@
+<Seniors>
+    <Senior id ="101">
+        <seniorName>Joubert Genove</seniorName>
+        <age>69</age>
+        <address>09951896586</address>
+        <medicalHistory>Ubo</medicalHistory>
+        <phoneNumber>09951896586</phoneNumber>
+        <emergencyContactName>Jovita Baldovino</emergencyContactName>
+        <emergencyContact>09251893586</emergencyContact>
+    </Senior>
+</Seniors>

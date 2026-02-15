@@ -1,0 +1,7 @@
+<Inventory>
+    <Medicine id="M001">
+        <Name>Paracetamol</Name>
+        <Stock>100</Stock>
+        <Expiry>2027-12-31</Expiry>
+    </Medicine>
+</Inventory>

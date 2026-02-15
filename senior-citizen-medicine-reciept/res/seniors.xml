@@ -1,0 +1,13 @@
+<BarangayHealthRecords>
+    <Senior>
+        <ID>001</ID>
+        <Name>Juan Dela Cruz</Name>
+        <Vitals>
+            <BP>120/80</BP>
+            <Weight>65kg</Weight>
+        </Vitals>
+        <Medications>
+            <Medicine name="Metformin" dosage="500mg" stock="20" />
+        </Medications>
+    </Senior>
+</BarangayHealthRecords>
