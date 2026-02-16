@@ -5,10 +5,8 @@ import Controller.MedicationController;
 
 /*
  * This form allows doctors to prescribe new medications.
- *
- * Data entered here is converted into XML and sent to the server.
+ * Updated to support Role-Based Access Control and improved data handling.
  */
-
 public class PrescribedMedicineForm {
 
     public PrescribedMedicineForm() {
@@ -19,6 +17,9 @@ public class PrescribedMedicineForm {
         JTextField dosage = new JTextField(10);
         JTextField frequency = new JTextField(10);
         JTextField instructions = new JTextField(10);
+
+        // In a complete implementation, this would be retrieved from the login session.
+        String userRole = "Doctor";
 
         JButton submit = new JButton("Prescribe");
 
@@ -31,19 +32,26 @@ public class PrescribedMedicineForm {
         panel.add(submit);
 
         submit.addActionListener(e -> {
+            // Requirement 4.A: Ensure basic input integrity before calling the controller.
+            if (name.getText().trim().isEmpty() || dosage.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(frame, "Error: Name and Dosage are required.");
+                return;
+            }
 
+            // Requirement 2 & 4.C: Send prescription with the role for server-side verification.
             String response = MedicationController.prescribe(
                     name.getText(),
                     dosage.getText(),
                     frequency.getText(),
-                    instructions.getText()
+                    instructions.getText(),
+                    userRole
             );
 
             JOptionPane.showMessageDialog(frame, response);
         });
 
         frame.add(panel);
-        frame.setSize(400,250);
+        frame.setSize(400, 250);
         frame.setVisible(true);
     }
 }

@@ -1,7 +1,7 @@
-<Inventory>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Inventory>
     <Medicine id="M001">
         <Name>Paracetamol</Name>
-        <Stock>100</Stock>
+        <Stock>97</Stock>
         <Expiry>2027-12-31</Expiry>
     </Medicine>
 </Inventory>
